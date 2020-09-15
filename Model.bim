@@ -1,0 +1,447 @@
+{
+  "name": "SemanticModel",
+  "compatibilityLevel": 1400,
+  "model": {
+    "culture": "en-IN",
+    "dataSources": [
+      {
+        "type": "structured",
+        "name": "AnalysisServices/asazure://aspaaseastus2 asazure windows net/azaepoprod",
+        "connectionDetails": {
+          "protocol": "analysis-services",
+          "address": {
+            "server": "asazure://aspaaseastus2.asazure.windows.net/azaepoprod"
+          },
+          "authentication": null,
+          "query": null
+        },
+        "options": {
+          "typedMeasureColumns": true,
+          "implementation": "2.0"
+        },
+        "credential": {
+          "AuthenticationKind": "UsernamePassword",
+          "Username": "prashanth.rama@stryker.com"
+        }
+      },
+      {
+        "type": "structured",
+        "name": "SQL/maserver database windows net;ProductivityCube",
+        "connectionDetails": {
+          "protocol": "tds",
+          "address": {
+            "server": "maserver.database.windows.net",
+            "database": "ProductivityCube"
+          },
+          "authentication": null,
+          "query": null
+        },
+        "options": {},
+        "credential": {
+          "AuthenticationKind": "UsernamePassword",
+          "Username": "strykeruser",
+          "EncryptConnection": true
+        }
+      }
+    ],
+    "tables": [
+      {
+        "name": "Envision_DIM_Product",
+        "columns": [
+          {
+            "name": "Dim_Products.Active Flag",
+            "dataType": "string",
+            "sourceColumn": "Dim_Products.Active Flag"
+          },
+          {
+            "name": "Dim_Products.BarcodeCatalogNumber",
+            "dataType": "string",
+            "sourceColumn": "Dim_Products.BarcodeCatalogNumber"
+          },
+          {
+            "name": "Dim_Products.Brand",
+            "dataType": "string",
+            "sourceColumn": "Dim_Products.Brand"
+          },
+          {
+            "name": "Dim_Products.Business Sector",
+            "dataType": "string",
+            "sourceColumn": "Dim_Products.Business Sector"
+          },
+          {
+            "name": "Dim_Products.Business Unit",
+            "dataType": "string",
+            "sourceColumn": "Dim_Products.Business Unit"
+          },
+          {
+            "name": "Dim_Products.CatalogNumber",
+            "dataType": "string",
+            "sourceColumn": "Dim_Products.CatalogNumber"
+          },
+          {
+            "name": "Dim_Products.Current Year Division",
+            "dataType": "string",
+            "sourceColumn": "Dim_Products.Current Year Division"
+          },
+          {
+            "name": "Dim_Products.Current Year Franchise Description",
+            "dataType": "string",
+            "sourceColumn": "Dim_Products.Current Year Franchise Description"
+          },
+          {
+            "name": "Dim_Products.Current Year FranchiseCode",
+            "dataType": "string",
+            "sourceColumn": "Dim_Products.Current Year FranchiseCode"
+          },
+          {
+            "name": "Dim_Products.Current Year Marketing Code",
+            "dataType": "string",
+            "sourceColumn": "Dim_Products.Current Year Marketing Code"
+          },
+          {
+            "name": "Dim_Products.Current Year Marketing Product Group Code",
+            "dataType": "string",
+            "sourceColumn": "Dim_Products.Current Year Marketing Product Group Code"
+          },
+          {
+            "name": "Dim_Products.Current Year Product Group",
+            "dataType": "string",
+            "sourceColumn": "Dim_Products.Current Year Product Group"
+          },
+          {
+            "name": "Dim_Products.Current Year Product Line Name",
+            "dataType": "string",
+            "sourceColumn": "Dim_Products.Current Year Product Line Name"
+          },
+          {
+            "name": "Dim_Products.CurrentMarkupClass",
+            "dataType": "string",
+            "sourceColumn": "Dim_Products.CurrentMarkupClass"
+          },
+          {
+            "name": "Dim_Products.Deleted Flag",
+            "dataType": "string",
+            "sourceColumn": "Dim_Products.Deleted Flag"
+          },
+          {
+            "name": "Dim_Products.Dimension Unit Of Measure",
+            "dataType": "string",
+            "sourceColumn": "Dim_Products.Dimension Unit Of Measure"
+          },
+          {
+            "name": "Dim_Products.Franchise",
+            "dataType": "string",
+            "sourceColumn": "Dim_Products.Franchise"
+          },
+          {
+            "name": "Dim_Products.Global PLC",
+            "dataType": "string",
+            "sourceColumn": "Dim_Products.Global PLC"
+          },
+          {
+            "name": "Dim_Products.Item Owner",
+            "dataType": "string",
+            "sourceColumn": "Dim_Products.Item Owner"
+          },
+          {
+            "name": "Dim_Products.Item Owner Name",
+            "dataType": "string",
+            "sourceColumn": "Dim_Products.Item Owner Name"
+          },
+          {
+            "name": "Dim_Products.Item Type Description",
+            "dataType": "string",
+            "sourceColumn": "Dim_Products.Item Type Description"
+          },
+          {
+            "name": "Dim_Products.ItemId",
+            "dataType": "string",
+            "sourceColumn": "Dim_Products.ItemId"
+          },
+          {
+            "name": "Dim_Products.ItemTypeCode",
+            "dataType": "string",
+            "sourceColumn": "Dim_Products.ItemTypeCode"
+          },
+          {
+            "name": "Dim_Products.KeyItemFlag",
+            "dataType": "string",
+            "sourceColumn": "Dim_Products.KeyItemFlag"
+          },
+          {
+            "name": "Dim_Products.LastChangeDate",
+            "dataType": "string",
+            "sourceColumn": "Dim_Products.LastChangeDate"
+          },
+          {
+            "name": "Dim_Products.SubClassification",
+            "dataType": "string",
+            "sourceColumn": "Dim_Products.SubClassification"
+          },
+          {
+            "name": "Dim_Products.SubSegment",
+            "dataType": "string",
+            "sourceColumn": "Dim_Products.SubSegment"
+          },
+          {
+            "name": "Dim_Products.SubstituteItem",
+            "dataType": "string",
+            "sourceColumn": "Dim_Products.SubstituteItem"
+          }
+        ],
+        "partitions": [
+          {
+            "name": "Partition",
+            "dataView": "full",
+            "source": {
+              "type": "m",
+              "expression": [
+                "let",
+                "    Source = #\"AnalysisServices/asazure://aspaaseastus2 asazure windows net/azaepoprod\",",
+                "    Envision1 = Source{[Name=\"Envision\"]}[Data],",
+                "    Envision2 = Envision1{[Id=\"Envision\"]}[Data],",
+                "    Envision3 = Envision2{[Id=\"Envision\"]}[Data],",
+                "    #\"Added Items\" = Cube.Transform(Envision3,",
+                "        {",
+                "            {Cube.AddAndExpandDimensionColumn, \"[Dim_Products]\", {\"[Dim_Products].[Active Flag].[Active Flag]\", \"[Dim_Products].[BarcodeCatalogNumber].[BarcodeCatalogNumber]\", \"[Dim_Products].[Brand].[Brand]\", \"[Dim_Products].[Business Sector].[Business Sector]\", \"[Dim_Products].[Business Unit].[Business Unit]\", \"[Dim_Products].[CatalogNumber].[CatalogNumber]\", \"[Dim_Products].[Current Year Division].[Current Year Division]\", \"[Dim_Products].[Current Year Franchise Description].[Current Year Franchise Description]\", \"[Dim_Products].[Current Year FranchiseCode].[Current Year FranchiseCode]\", \"[Dim_Products].[Current Year Marketing Code].[Current Year Marketing Code]\", \"[Dim_Products].[Current Year Marketing Product Group Code].[Current Year Marketing Product Group Code]\", \"[Dim_Products].[Current Year Product Group].[Current Year Product Group]\", \"[Dim_Products].[Current Year Product Line Name].[Current Year Product Line Name]\", \"[Dim_Products].[CurrentMarkupClass].[CurrentMarkupClass]\", \"[Dim_Products].[Deleted Flag].[Deleted Flag]\", \"[Dim_Products].[Dimension Unit Of Measure].[Dimension Unit Of Measure]\", \"[Dim_Products].[Franchise].[Franchise]\", \"[Dim_Products].[Global PLC].[Global PLC]\", \"[Dim_Products].[Item Owner].[Item Owner]\", \"[Dim_Products].[Item Owner Name].[Item Owner Name]\", \"[Dim_Products].[Item Type Description].[Item Type Description]\", \"[Dim_Products].[ItemId].[ItemId]\", \"[Dim_Products].[ItemTypeCode].[ItemTypeCode]\", \"[Dim_Products].[KeyItemFlag].[KeyItemFlag]\", \"[Dim_Products].[LastChangeDate].[LastChangeDate]\", \"[Dim_Products].[SubClassification].[SubClassification]\", \"[Dim_Products].[SubSegment].[SubSegment]\", \"[Dim_Products].[SubstituteItem].[SubstituteItem]\"}, {\"Dim_Products.Active Flag\", \"Dim_Products.BarcodeCatalogNumber\", \"Dim_Products.Brand\", \"Dim_Products.Business Sector\", \"Dim_Products.Business Unit\", \"Dim_Products.CatalogNumber\", \"Dim_Products.Current Year Division\", \"Dim_Products.Current Year Franchise Description\", \"Dim_Products.Current Year FranchiseCode\", \"Dim_Products.Current Year Marketing Code\", \"Dim_Products.Current Year Marketing Product Group Code\", \"Dim_Products.Current Year Product Group\", \"Dim_Products.Current Year Product Line Name\", \"Dim_Products.CurrentMarkupClass\", \"Dim_Products.Deleted Flag\", \"Dim_Products.Dimension Unit Of Measure\", \"Dim_Products.Franchise\", \"Dim_Products.Global PLC\", \"Dim_Products.Item Owner\", \"Dim_Products.Item Owner Name\", \"Dim_Products.Item Type Description\", \"Dim_Products.ItemId\", \"Dim_Products.ItemTypeCode\", \"Dim_Products.KeyItemFlag\", \"Dim_Products.LastChangeDate\", \"Dim_Products.SubClassification\", \"Dim_Products.SubSegment\", \"Dim_Products.SubstituteItem\"}}",
+                "        }),",
+                "    #\"Filtered Rows\" = Table.SelectRows(#\"Added Items\", each (Cube.AttributeMemberId([Dim_Products.Item Owner]) = \"[Dim_Products].[Item Owner].&[END]\" meta [DisplayName = \"END\"]))",
+                "in",
+                "    #\"Filtered Rows\""
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "name": "POWERAPP_BUSINESS_UNIT",
+        "columns": [
+          {
+            "name": "BUID",
+            "dataType": "int64",
+            "sourceColumn": "BUID"
+          },
+          {
+            "name": "BUNAME",
+            "dataType": "string",
+            "sourceColumn": "BUNAME"
+          }
+        ],
+        "partitions": [
+          {
+            "name": "Partition",
+            "dataView": "full",
+            "source": {
+              "type": "m",
+              "expression": [
+                "let",
+                "    Source = #\"SQL/maserver database windows net;ProductivityCube\",",
+                "    dbo_POWERAPP_BUSINESS_UNIT = Source{[Schema=\"dbo\",Item=\"POWERAPP_BUSINESS_UNIT\"]}[Data]",
+                "in",
+                "    dbo_POWERAPP_BUSINESS_UNIT"
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "name": "POWERAPP_DEPARTMENT",
+        "columns": [
+          {
+            "name": "AUTO_NUMBER",
+            "dataType": "int64",
+            "sourceColumn": "AUTO_NUMBER"
+          },
+          {
+            "name": "WWRKC",
+            "dataType": "string",
+            "sourceColumn": "WWRKC"
+          },
+          {
+            "name": "DEPT_NO",
+            "dataType": "string",
+            "sourceColumn": "DEPT_NO"
+          },
+          {
+            "name": "DEPT_NAME",
+            "dataType": "string",
+            "sourceColumn": "DEPT_NAME"
+          },
+          {
+            "name": "BUSINESS_UNIT",
+            "dataType": "string",
+            "sourceColumn": "BUSINESS_UNIT"
+          },
+          {
+            "name": "BUID",
+            "dataType": "int64",
+            "sourceColumn": "BUID"
+          }
+        ],
+        "partitions": [
+          {
+            "name": "Partition",
+            "dataView": "full",
+            "source": {
+              "type": "m",
+              "expression": [
+                "let",
+                "    Source = #\"SQL/maserver database windows net;ProductivityCube\",",
+                "    dbo_POWERAPP_DEPARTMENT = Source{[Schema=\"dbo\",Item=\"POWERAPP_DEPARTMENT\"]}[Data]",
+                "in",
+                "    dbo_POWERAPP_DEPARTMENT"
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "name": "PowerApp_Plant_Hierarchy",
+        "columns": [
+          {
+            "name": "ID",
+            "dataType": "int64",
+            "sourceColumn": "ID"
+          },
+          {
+            "name": "BU",
+            "dataType": "string",
+            "sourceColumn": "BU"
+          },
+          {
+            "name": "Department",
+            "dataType": "string",
+            "sourceColumn": "Department"
+          },
+          {
+            "name": "Cell",
+            "dataType": "string",
+            "sourceColumn": "Cell"
+          },
+          {
+            "name": "CostCenter",
+            "dataType": "string",
+            "sourceColumn": "CostCenter"
+          },
+          {
+            "name": "WorkCenter",
+            "dataType": "string",
+            "sourceColumn": "WorkCenter"
+          },
+          {
+            "name": "MachineNum",
+            "dataType": "string",
+            "sourceColumn": "MachineNum"
+          }
+        ],
+        "partitions": [
+          {
+            "name": "Partition",
+            "dataView": "full",
+            "source": {
+              "type": "m",
+              "expression": [
+                "let",
+                "    Source = #\"SQL/maserver database windows net;ProductivityCube\",",
+                "    dbo_PowerApp_Plant_Hierarchy = Source{[Schema=\"dbo\",Item=\"PowerApp_Plant_Hierarchy\"]}[Data]",
+                "in",
+                "    dbo_PowerApp_Plant_Hierarchy"
+              ]
+            }
+          }
+        ]
+      }
+    ],
+    "relationships": [
+      {
+        "name": "b1621671-9293-4718-9af8-fb0a1e02f2dc",
+        "fromTable": "POWERAPP_DEPARTMENT",
+        "fromColumn": "BUID",
+        "toTable": "POWERAPP_BUSINESS_UNIT",
+        "toColumn": "BUID"
+      },
+      {
+        "name": "fa346aa9-8c79-45bf-98db-9f8de7765633",
+        "fromCardinality": "one",
+        "fromTable": "POWERAPP_BUSINESS_UNIT",
+        "fromColumn": "BUNAME",
+        "toTable": "PowerApp_Plant_Hierarchy",
+        "toColumn": "BU",
+        "crossFilteringBehavior": "bothDirections"
+      }
+    ],
+    "perspectives": [
+      {
+        "name": "Perspective1",
+        "tables": [
+          {
+            "name": "POWERAPP_BUSINESS_UNIT",
+            "columns": [
+              {
+                "name": "BUID"
+              },
+              {
+                "name": "BUNAME"
+              }
+            ]
+          },
+          {
+            "name": "PowerApp_Plant_Hierarchy",
+            "columns": [
+              {
+                "name": "WorkCenter"
+              },
+              {
+                "name": "MachineNum"
+              },
+              {
+                "name": "ID"
+              },
+              {
+                "name": "Department"
+              },
+              {
+                "name": "CostCenter"
+              },
+              {
+                "name": "Cell"
+              },
+              {
+                "name": "BU"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "name": "Perspective2"
+      }
+    ],
+    "roles": [
+      {
+        "name": "Read",
+        "description": "To read the model",
+        "modelPermission": "read"
+      },
+      {
+        "name": "Admin",
+        "description": "Admin role",
+        "modelPermission": "administrator",
+        "members": [
+          {
+            "memberName": "prashanth.rama@stryker.com",
+            "memberId": "prashanth.rama@stryker.com",
+            "identityProvider": "AzureAD"
+          }
+        ]
+      }
+    ],
+    "annotations": [
+      {
+        "name": "ClientCompatibilityLevel",
+        "value": "500"
+      }
+    ]
+  },
+  "id": "SemanticModel"
+}
